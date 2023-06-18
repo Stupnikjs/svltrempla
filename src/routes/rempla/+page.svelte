@@ -28,6 +28,10 @@ export let data:dataResp
         <a href="/manager">Gerer Mes Remlpa</a>
     </div>
 
-    
-    <Calendar remplas={data.remplas}></Calendar>
+    {#if data === undefined}
+            <p>Loader</p>
+    {:else}
+        <Calendar remplas={data.remplas}></Calendar>
+    {/if}
+   
 </div>

@@ -1,7 +1,6 @@
 {
 	"name": "svelte-rempla",
 	"version": "0.0.1",
-	"private": true,
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
@@ -23,6 +22,7 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"@fontsource/kreon": "^5.0.3"
+		"@fontsource/kreon": "^5.0.3",
+		"@sveltejs/adapter-node": "^1.2.4"
 	}
 }
