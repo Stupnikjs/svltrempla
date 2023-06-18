@@ -3,7 +3,7 @@
     import type { rempla } from "../interface/rempla";
     import StringToDate from "../functions/StringToDate";
     import RemplaComponent from "./RemplaComponent.svelte";
-
+    import "@fontsource/kreon"
    
          
         const getArrayWeek = (remp: rempla, week: Date[]) => {
@@ -46,10 +46,14 @@
     background-color: var(--custcolor);
 }
 
+.kreon{
+    font-family: "Kreon",sans-serif;
+}
+
 </style>
 
 
-<div class="grid grid-cols-7 w-full bg-blue-100">
+<div class="grid grid-cols-7 w-full bg-blue-100 kreon">
 
     
     {#each week as day}

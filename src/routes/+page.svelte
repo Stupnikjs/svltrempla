@@ -1,27 +1,20 @@
-<script lang="ts">
-
-import type { jsonRempla } from "../interface/jsonRempla";
-import Calendar from "../components/Calendar.svelte";
-    import type { rempla } from "../interface/rempla";
-
-
-interface dataResp {
-    remplas: rempla[]
-}
-
-export let data:dataResp 
-
-
-</script>
-
-
-
 <div>
-    <div class="flex bg-blue-50 h-10 items-center justify-around">
-        <a href="/create">Ajouter Rempla</a>
-        <a href="/manager">Gerer Mes Remlpa</a>
-    </div>
+    <h1> Page d'acceuil des Remplacements </h1>
+   <a href="/rempla"> Voir mes rempla </a>
 
-    
-    <Calendar remplas={data.remplas}></Calendar>
+
 </div>
+
+<style>
+    h1,a{
+        font-size: 2rem;
+        text-align: center;
+    }
+    a{
+        background-color: aqua;
+        display: block;
+        width: 30%;
+        margin: auto; 
+
+    }
+</style>

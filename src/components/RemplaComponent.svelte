@@ -6,8 +6,8 @@
 
 
 
-<div class="">
-    <span class="font-black">{rempla.location}</span>
+<div class="overflow-hidden whitespace-nowrap">
+    <span class="font-black ">{rempla.location}</span>
     
     <span>{rempla.logiciel}</span>
 </div>

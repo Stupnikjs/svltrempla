@@ -2,7 +2,7 @@
     import WeekComponent from "./WeekComponent.svelte";
     import SliceArrayByN from "../functions/SliceArray";
     import type { rempla } from "../interface/rempla";
-    
+    import "@fontsource/kreon"; 
 
 
 
@@ -63,6 +63,10 @@ export let remplas:rempla[];
 </script>
 
 <style>
+
+    .kreon{
+    font-family: "Kreon",sans-serif;
+}
     .outlined{
         outline: 2px solid transparent;  
     }
@@ -79,17 +83,17 @@ export let remplas:rempla[];
 
 </style>
 
-<div>
+<div class="kreon">
     <div class="bg-gray-200 flex justify-center items-center">
         <button class="px-5  bg-yellow-200 rounded outlined h-1/2 " on:click|preventDefault={e=> {e.preventDefault() ; monthIncr(false)}}>-</button>
-        <div class="px-5 min-w h-10 items-center flex justify-center">{Months[selected]}{year}</div>
+        <div class="px-5 min-w h-10 items-center flex justify-center">{Months[selected]}<span class="mx-2">{year}</span></div>
         <button class="px-5  bg-yellow-200 rounded outlined h-1/2" on:click|preventDefault={e =>{e.stopPropagation(); monthIncr(true)}}>+</button>
     </div>
 
 
-    <div class="flex h-5 gap-1 ">
+    <div class="flex h-5 gap-1">
         {#each daysOfWeek as day }
-            <span class="flex-1 bg-black text-white text-center rounded-xl">{day}</span>
+            <span class="flex-1 bg-black text-white text-center rounded-xl h-8">{day}</span>
         {/each}
     </div>
     <div class="my-3">
