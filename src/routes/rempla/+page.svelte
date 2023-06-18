@@ -24,7 +24,7 @@ export let data:dataResp
 
 <div>
     <div class="flex bg-blue-50 h-10 items-center justify-around font">
-        <a href="/create">Ajouter Rempla</a>
+        <a href="/remplaform">Ajouter Rempla</a>
         <a href="/manager">Gerer Mes Remlpa</a>
     </div>
 

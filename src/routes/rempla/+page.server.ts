@@ -8,8 +8,9 @@ export const load: PageServerLoad = async () => {
                     method:'GET',               
         });
 
+        
         const remplas = await response.json();
-            
+       
         return {remplas};
          
 };

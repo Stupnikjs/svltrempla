@@ -3,7 +3,7 @@ export interface rempla {
     fin: string,
     location : string,
     logiciel: string,  
-    retrocession: string, 
+    retrocession: number, 
     minutes_from_home: number,
     id?: string, 
 
