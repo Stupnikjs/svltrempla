@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { each } from "svelte/internal";
+    
     import type { rempla } from "../interface/rempla";
     import StringToDate from "../functions/StringToDate";
     import RemplaComponent from "./RemplaComponent.svelte";
@@ -9,7 +9,7 @@
         const getArrayWeek = (remp: rempla, week: Date[]) => {
         let debut = StringToDate(remp.debut)
         let fin = StringToDate(remp.fin)
-       
+        console.log(debut, fin)
         let newarr =  week.map((el:Date) => {
             
             if(el.getTime() >= debut.getTime() && el.getTime() <= fin.getTime() ) return true
@@ -62,7 +62,7 @@
     <span class="p-1 bg-yellow-50 flex-1 text-center my-5 mx-1">{day.getFullYear() != 1899 ? day.getDate(): ""}</span>
     {/each}
     {#each remplas as rempla, index }
-
+        
         {#if getArrayWeek(rempla, week)[0] !== 0}
         <div class="w-full rempla flex justify-center p-2 mx-1" style="
         --custcolor: {colors[index % colors.length]}; 

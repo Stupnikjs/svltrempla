@@ -43,16 +43,13 @@ const getWeeks = (selected:number) => {
     let firstOfMonth = new Date(year, selected, 1).getDay()
 
     let monthDuration = new Date(year, selected + 1, 0).getDate()
-    console.log(new Date(year, selected, 1))
-    console.log(firstOfMonth)
-    console.log(monthDuration)
     let firstOfMonthArr = new Array(firstOfMonth === 0 ? firstOfMonth = 6: firstOfMonth - 1).fill(new Date(0, 0, 0))
     let arr = new Array(monthDuration).fill(0)
     let arr2 = arr.map((el, index) => {
         return new Date(year, selected, index + 1)
     })
      arr2 = firstOfMonthArr.concat(arr2)
-    console.log(SliceArrayByN<Date>(arr2, 7, new Date(0,0,0)))
+    
     return SliceArrayByN<Date>(arr2, 7, new Date(0,0,0))
 
 }; 
@@ -93,7 +90,7 @@ export let remplas:rempla[];
 
     <div class="flex h-5 gap-1">
         {#each daysOfWeek as day }
-            <span class="flex-1 bg-black text-white text-center rounded-xl h-8">{day}</span>
+            <span class="flex-1 bg-black items-center text-white justify-center rounded-xl h-8 flex">{day}</span>
         {/each}
     </div>
     <div class="my-3">

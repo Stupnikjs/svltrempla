@@ -10,7 +10,7 @@ export const load: PageServerLoad = async () => {
 
         
         const remplas = await response.json();
-        console.log(remplas)
+       
         return {remplas};
          
 };

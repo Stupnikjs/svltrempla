@@ -45,7 +45,7 @@
                 
                 }
 
-                console.log(rempla)
+               
         let res = await fetch(`${import.meta.env.VITE_API_REMPLA_URL}/api/new`,  {
              method: "POST",
              headers: {
@@ -55,7 +55,7 @@
             
             })
 
-           if (res.status === 200)  console.log("success")
+           if (res.status === 201) window.location.assign("/rempla")
         }
    
         
@@ -76,9 +76,9 @@
     <fieldset class="flex flex-col gap-2">
         <legend> Dates de la rempla </legend>
                         <label for="start">Debut</label>
-                        <input class="w-1/3" type="date" name="start" on:change={e => setStart(e)}/>
+                        <input class="w-1/2" type="date" name="start" on:change={e => setStart(e)}/>
                         <label for="end">Fin</label>
-                        <input class="w-1/3" type='date' name="end" on:change={e => setEnd(e)}/>
+                        <input class="w-1/2" type='date' name="end" on:change={e => setEnd(e)}/>
 
                         <label for="location">Localisation</label>
                         <input type="text" name="location" on:change={e => setLocation(e)} />
@@ -91,7 +91,7 @@
                         <input type="text" on:change={e => setLogiciel(e)} />
                         
                         <label for="retrocession">Retrocession </label>
-                        <div><input type="number" name="retrocession" on:change={e => setRetrocession(e)} /><span>%</span></div>
+                        <div><input type="number" name="retrocession" class="w-1/3" on:change={e => setRetrocession(e)} /><span>%</span></div>
                         
                         <button  type="submit" class="bg-blue-300 w-1/3">Envoyer</button>
 

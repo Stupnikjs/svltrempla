@@ -4,10 +4,8 @@ import type { jsonRempla } from "../../interface/jsonRempla";
 import Calendar from "../../components/Calendar.svelte";
 import type { rempla } from "../../interface/rempla";
 import "@fontsource/kreon"; 
+import type { dataResp } from "../../interface/dataResp";
 
-interface dataResp {
-    remplas: rempla[]
-}
 
 export let data:dataResp 
 
@@ -31,7 +29,9 @@ export let data:dataResp
     {#if data === undefined}
             <p>Loader</p>
     {:else}
-        <Calendar remplas={data.remplas}></Calendar>
+        <main>
+            <Calendar remplas={data.remplas}></Calendar>
+        </main>
     {/if}
    
 </div>
