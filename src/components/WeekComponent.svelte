@@ -34,7 +34,7 @@
     
     
     export let week:Date[]
-    export let colors = ["blue", "red", "green", "yellow"]
+    export let colors:string[]; 
     export let remplas: rempla[]
    
 </script>
