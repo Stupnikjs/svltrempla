@@ -1,13 +1,18 @@
 <script lang="ts">
 
-import type { jsonRempla } from "../../interface/jsonRempla";
 import Calendar from "../../components/Calendar.svelte";
-import type { rempla } from "../../interface/rempla";
+import Footer from "../../components/Footer.svelte";
 import "@fontsource/kreon"; 
 import type { dataResp } from "../../interface/dataResp";
-
+import { onMount } from "svelte";
 
 export let data:dataResp 
+
+let ready = false;
+
+onMount(() => {
+   ready = true }
+    )
 
 
 </script>
@@ -17,6 +22,17 @@ export let data:dataResp
     .font{
         font-family: "Kreon", sans-serif;
     }
+
+    .media{
+        margin: 2% 10%;
+    }
+    @media screen and (max-width: 1000px ){
+            
+       .media{
+        margin: 2%;
+       }     
+          
+        }
 </style>
 
 
@@ -26,12 +42,14 @@ export let data:dataResp
         <a href="/manager">Gerer Mes Remlpa</a>
     </div>
 
-    {#if data === undefined}
+    {#if !ready }
             <p>Loader</p>
     {:else}
-        <main>
+        <main class="media">
             <Calendar remplas={data.remplas}></Calendar>
         </main>
     {/if}
+
+    <Footer></Footer>
    
 </div>

@@ -23,7 +23,7 @@
 	"type": "module",
 	"dependencies": {
 		"@fontsource/kreon": "^5.0.3",
+		"@fontsource/voltaire": "^5.0.3",
 		"@sveltejs/adapter-node": "^1.2.4"
-		
 	}
 }

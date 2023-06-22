@@ -7,7 +7,7 @@
 
 
 <div class="overflow-hidden whitespace-nowrap">
-    <span class="font-black ">{rempla.location}</span>
+    <span class="font-black text-sm">{rempla.location}</span>
     
-    <span>{rempla.logiciel}</span>
+    <span class="text-sm">{rempla.logiciel}</span>
 </div>

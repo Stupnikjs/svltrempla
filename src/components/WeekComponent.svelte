@@ -29,12 +29,9 @@
     }
 
     
+    export let colors = [ "blue", "yellow", "green", "pink", "gray", "salmon", "cyan"]
     
-   
-    
-    
-    export let week:Date[]
-    export let colors:string[]; 
+    export let week:Date[] 
     export let remplas: rempla[]
    
 </script>
@@ -64,7 +61,7 @@
     {#each remplas as rempla, index }
         
         {#if getArrayWeek(rempla, week)[0] !== 0}
-        <div class="w-full rempla flex justify-center p-2 mx-1" style="
+        <div class="w-full rempla flex justify-center  mx-1" style="
         --custcolor: {colors[index % colors.length]}; 
         --start: {getArrayWeek(rempla, week)[0]} ; 
         --end: {getArrayWeek(rempla, week)[1]}; */
