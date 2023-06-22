@@ -2,8 +2,8 @@
 <script lang="ts">
 
 import type { dataResp } from "../../interface/dataResp"
-import "@fontsource/kreon"
 import RemplaManagerBtn from "../../components/RemplaManagerBtn.svelte";
+import BackButton from "../../components/BackButton.svelte";
 async function deleteHandler(e){
     const res = await fetch(`${import.meta.env.VITE_API_REMPLA_URL}/api/delete/${e.target.id}`, )
     if (res.status === 200) window.location.assign("/rempla")
@@ -18,10 +18,7 @@ export let data:dataResp
 
 <style>
    
-    .kreon{
-    font-family: "Kreon",sans-serif;
-    }
-
+    
     .media{
         margin: 5% 10%;
     }
@@ -35,6 +32,9 @@ export let data:dataResp
 </style>
 
 <div>
+    <header class="flex justify-center my-3">
+       <BackButton></BackButton>
+    </header>
     <main class="media">
         
         <div class="flex flex-wrap gap-1 p-2 justify-around">
