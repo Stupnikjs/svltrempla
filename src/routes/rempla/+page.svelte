@@ -8,6 +8,8 @@ import { onMount } from "svelte";
 
 export let data:dataResp 
 
+// composant 
+
 let ready = false;
 
 onMount(() => {
