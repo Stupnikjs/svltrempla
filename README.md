@@ -1,3 +1,3 @@
-# Application de remplacement 
+# Rempla 
 
 $VITE_API_REMPLA_URL variable environement 
