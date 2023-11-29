@@ -87,7 +87,7 @@ export let remplas:rempla[];
 
 
 <div class="kreon">
-    <div class="bg-gray-200 flex justify-center items-center">
+    <div class="bg-gray-200 flex justify-center items-center h-full">
         <button class="px-5  bg-yellow-200 rounded outlined h-1/2 " on:click|preventDefault={e=> {e.preventDefault() ; monthIncr(false)}}>-</button>
         <div class="px-5 min-w h-10 items-center flex justify-center">{Months[selected]}<span class="mx-2">{year}</span></div>
         <button class="px-5  bg-yellow-200 rounded outlined h-1/2" on:click|preventDefault={e =>{e.stopPropagation(); monthIncr(true)}}>+</button>
