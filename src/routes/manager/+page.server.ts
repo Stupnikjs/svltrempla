@@ -1,10 +1,11 @@
 import type { PageServerLoad,  } from "./$types";
+import { endpoint } from "../../config/config";
 
 export const prerender = false; 
 
 export const load: PageServerLoad = async () => {
 
-        const response = await fetch(`${import.meta.env.VITE_API_REMPLA_URL}/api/all/`,{
+        const response = await fetch(`${endpoint}/api/all/`,{
                     method:'GET',               
         });
 

@@ -1,6 +1,7 @@
 <script lang="ts">
 
     import type { rempla } from "../interface/rempla";
+    import {endpoint} from '../config/config.js'
     $: start = ""
     $: end = ""
     $: location = ""
@@ -46,7 +47,7 @@
                 }
 
         if (!update){
-            let res = await fetch(`${import.meta.env.VITE_API_REMPLA_URL}/api/new`,  {
+            let res = await fetch(`${endpoint}/api/new`,  {
              method: "POST",
              headers: {
                 'Content-Type': "application/json"
@@ -57,7 +58,7 @@
 
            if (res.status === 201) window.location.assign("/rempla")
         } else {
-            let res = await fetch(`${import.meta.env.VITE_API_REMPLA_URL}/api/update`,  {
+            let res = await fetch(`${endpoint}/api/update`,  {
              method: "POST",
              headers: {
                 'Content-Type': "application/json"

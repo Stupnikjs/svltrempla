@@ -1,10 +1,11 @@
 import type { PageServerLoad,  } from "./$types";
+import  { endpoint }  from '../../config/config.js'
 
 export const prerender = false; 
 
 export const load: PageServerLoad = async () => {
-const url = "https://de-zoom-gsnolkapya-od.a.run.app"
-         const response = await fetch(`${url}/api/all/`,{
+
+         const response = await fetch(`${endpoint}/api/all/`,{
                     method:'GET',               
         });
 

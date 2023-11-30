@@ -1,0 +1,1 @@
+export const endpoint = "https://de-zoom-gsnolkapya-od.a.run.app"
