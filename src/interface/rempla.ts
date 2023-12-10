@@ -5,6 +5,7 @@ export interface rempla {
     logiciel: string,  
     retrocession: number, 
     minutes_from_home: number,
+    color:string,
     id?: string, 
 
 }

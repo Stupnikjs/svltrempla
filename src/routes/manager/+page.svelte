@@ -4,8 +4,9 @@
 import type { dataResp } from "../../interface/dataResp"
 import RemplaManagerBtn from "../../components/RemplaManagerBtn.svelte";
 import BackButton from "../../components/BackButton.svelte";
+import {endpoint} from "../../config/config"
 async function deleteHandler(e){
-    const res = await fetch(`${import.meta.env.VITE_API_REMPLA_URL}/api/delete/${e.target.id}`, )
+    const res = await fetch(`${endpoint}/api/del/${e.target.id}`, )
     if (res.status === 200) window.location.assign("/rempla")
 } 
 

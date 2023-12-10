@@ -8,6 +8,7 @@
     $: logiciel = ""
     $: retrocession = 0
     $: travelTime = 0
+    $: color = ""
 
 
     function setStart(e){
@@ -33,6 +34,10 @@
     function setTravelTime(e){
         if (e.target.name = "travelTime")
         travelTime = parseInt(e.target.value)
+    }
+    function setColor(e){
+        if (e.target.name = "color")
+        color = e.target.value
     }
 
     async function postRempla(update:boolean){
@@ -107,7 +112,10 @@
                         
                         <label for="retrocession">Retrocession </label>
                         <div><input type="number" value={update && rempla !== null ? rempla.retrocession:""} name="retrocession" class="w-1/3" on:change={e => setRetrocession(e)} /><span>%</span></div>
-                        
+                        <div class="flex item-center ">
+                            <label for="color">Sélectione une couleur </label>
+                            <input type="color" value={update && rempla !== null ? rempla.color: ""} name="color" class="w-1/3" on:change={e => setColor(e)}>
+                        </div>
                         <button  type="submit" class="bg-blue-300 w-1/3">Envoyer</button>
 
     </fieldset>

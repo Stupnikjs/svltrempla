@@ -1,16 +1,14 @@
 <script>
     import "@fontsource/voltaire"
     import img from "../image/favicon.png"
+    import Header from "../components/Header.svelte";
 
     $: loading = false; 
 
 </script>
 
 <div class="relative h-screen">
-    <header class="h-10 bg-blue-100 flex items-center bx-shad">
-      <a href="/rempla"class="bg-blue-400 p-3 rounded h-1/3 flex items-center voltaire text-sm ml-5" on:click={ e => {loading = true}}> s'identifier </a> 
-      <a href="/#"class="bg-blue-400 p-3 rounded h-1/3 flex items-center voltaire text-sm ml-5"> s'inscrire </a> 
-    </header>
+     <Header></Header>
      <main class="voltaire  m-10">
         <p>
             <strong>Remplace</strong> est une application web pour afficher des 
