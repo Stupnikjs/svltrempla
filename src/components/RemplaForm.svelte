@@ -48,9 +48,10 @@
                     location: location,
                     logiciel: logiciel,
                     retrocession: retrocession,
-                    minutes_from_home: travelTime
+                    minutes_from_home: travelTime,
+                    color: color
                 }
-
+        console.log(rempla)
         if (!update){
             let res = await fetch(`${endpoint}/api/new`,  {
              method: "POST",
@@ -71,7 +72,7 @@
              body: JSON.stringify(rempla)
             
             })
-
+            
            if (res.status === 201) window.location.assign("/rempla")
         }
         }       
